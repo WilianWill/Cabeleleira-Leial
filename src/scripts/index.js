@@ -46,11 +46,19 @@ const myObserver = new IntersectionObserver((items) => {
     if (item.isIntersecting) {
       item.target.classList.add("show");
     } else {
-      item.target.classList.remove("show");
+      item.target.classList.add("hidden");
     }
   });
 });
 
 elements.forEach((element) => {
   myObserver.observe(element);
+});
+
+const nav = document.querySelector(".navigation");
+const section = document.querySelectorAll("section");
+const navHeight = nav.offsetHeight;
+
+section.forEach((section) => {
+  section.style.paddingTop = navHeight + "px";
 });
