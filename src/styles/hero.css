@@ -1,0 +1,103 @@
+.hero {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+
+  gap: 1rem;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: 100vh;
+  padding: 1rem;
+
+  overflow: hidden;
+  border-bottom: 1px solid var(--fontColor);
+  box-shadow: 0 0 10px 2px rgba(0, 0, 0, 0.1);
+  margin-bottom: 2rem;
+}
+
+#smiling-woman {
+  width: 60%;
+  border-top-left-radius: 50px;
+  border-top-right-radius: 50px;
+  border-bottom-right-radius: 10px;
+  border-bottom-left-radius: 10px;
+  box-shadow: 2px 2px 4px 5px rgba(0, 0, 0, 0.3);
+}
+#pinted-hands {
+  width: 30%;
+  position: relative;
+  right: 30px;
+  top: 100px;
+  border-radius: 20px;
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.hero_left {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+  gap: 1.5rem;
+  align-items: flex-start;
+}
+
+.hero_left h1 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  font-weight: 600;
+  letter-spacing: -1px;
+  line-height: 1.2;
+}
+
+.hero_right {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.saiba-mais {
+  background-color: var(--baseColor);
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  border: 1px solid var(--fontColor);
+  transition: all 0.3s ease-in-out;
+}
+
+.saiba-mais:hover {
+  background-color: var(--fontColor);
+  color: var(--baseColor);
+}
+
+/* media queries */
+
+@media screen and (max-width: 768px) {
+  .hero {
+    grid-template-columns: 1fr;
+    height: auto;
+    gap: 1rem;
+    padding: 2rem;
+    margin-top: 4rem;
+  }
+
+  #smiling-woman {
+    width: 100%;
+    border-radius: 20px;
+  }
+
+  #pinted-hands {
+    display: none;
+  }
+
+  .hero_left h1 {
+    font-size: 2rem;
+  }
+
+  .saiba-mais {
+    font-size: 0.8rem;
+  }
+}
