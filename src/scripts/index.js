@@ -51,6 +51,7 @@ const myObserver = new IntersectionObserver((items) => {
       item.target.classList.add("show");
     } else {
       item.target.classList.add("hidden");
+      item.target.classList.remove("show");
     }
   });
 });
