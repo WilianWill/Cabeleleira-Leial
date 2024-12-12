@@ -20,24 +20,28 @@ menuIcon.addEventListener("click", () => {
   }
 });
 
-document.addEventListener("click", (e) => {
-  let linkElement = e.target.closest("a");
+const closeMenuFora = () => {
+  document.addEventListener("click", (e) => {
+    let linkElement = e.target.closest("a");
 
-  if (linkElement) {
-    menu.classList.remove("active");
-    menuIcon.classList = "fa-solid fa-bars";
-  }
+    if (linkElement) {
+      menu.classList.remove("active");
+      menuIcon.classList = "fa-solid fa-bars";
+    }
 
-  if (!menu.contains(e.target) && e.target !== menuIcon) {
-    menu.classList.remove("active");
-  }
+    if (!menu.contains(e.target) && e.target !== menuIcon) {
+      menu.classList.remove("active");
+    }
 
-  if (menu.classList.contains("active")) {
-    menuIcon.classList = "fa-solid fa-xmark";
-  } else {
-    menuIcon.classList = "fa-solid fa-bars";
-  }
-});
+    if (menu.classList.contains("active")) {
+      menuIcon.classList = "fa-solid fa-xmark";
+    } else {
+      menuIcon.classList = "fa-solid fa-bars";
+    }
+  });
+};
+
+closeMenuFora();
 
 const elements = document.querySelectorAll(".hidden");
 
@@ -58,6 +62,7 @@ elements.forEach((element) => {
 const nav = document.querySelector(".navigation");
 const section = document.querySelectorAll("section");
 const navHeight = nav.offsetHeight;
+console.log(navHeight);
 
 section.forEach((section) => {
   section.style.paddingTop = navHeight + "px";

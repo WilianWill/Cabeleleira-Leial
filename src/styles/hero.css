@@ -79,9 +79,9 @@
   .hero {
     grid-template-columns: 1fr;
     height: auto;
-    gap: 1rem;
+    gap: 2rem;
     padding: 2rem;
-    margin-top: 4rem;
+    margin-top: 0;
   }
 
   #smiling-woman {
@@ -95,8 +95,19 @@
 
   .hero_left h1 {
     font-size: 2rem;
+    text-align: start;
   }
 
+  .hero_left {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+  .hero_left p {
+    text-align: start;
+  }
   .saiba-mais {
     font-size: 0.8rem;
   }
