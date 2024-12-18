@@ -44,6 +44,7 @@ const closeMenuFora = () => {
 const animarMenu = () => {
   let currentSection = null;
 
+  /* iterando sobre cada secao para colocar as animacoes */
   sections.forEach((section) => {
     const rect = section.getBoundingClientRect();
 
@@ -72,6 +73,7 @@ const animarMenu = () => {
     }
   });
 
+  /* garantir o mesmo comportamento de animação no footer */
   const footer = document.querySelector("footer");
   if (footer) {
     const footerRect = footer.getBoundingClientRect();
@@ -82,8 +84,6 @@ const animarMenu = () => {
     }
   }
 };
-
-window.addEventListener("scroll", animarMenu);
 
 animarMenu();
 closeMenuFora();
@@ -96,3 +96,5 @@ console.log(navHeight);
 section.forEach((section) => {
   section.style.paddingTop = navHeight + "px";
 });
+
+window.addEventListener("scroll", animarMenu);
