@@ -69,3 +69,8 @@ section {
     margin-top: 1.5rem;
   }
 }
+
+.activeLink {
+  color: red;
+  border-bottom: 1px solid var(--fontColor);
+}
