@@ -1,6 +1,7 @@
 const menuIcon = document.querySelector("#menu-icon");
 const menu = document.querySelector(".menu");
 const links = document.querySelectorAll("a");
+const sections = document.querySelectorAll("section");
 
 const fecharMenu = () => {
   links.forEach((link) => {
@@ -40,25 +41,52 @@ const closeMenuFora = () => {
     }
   });
 };
+const animarMenu = () => {
+  let currentSection = null;
 
-closeMenuFora();
+  sections.forEach((section) => {
+    const rect = section.getBoundingClientRect();
 
-const elements = document.querySelectorAll(".hidden");
+    if (
+      rect.top <= window.innerHeight / 2 &&
+      rect.bottom >= window.innerHeight / 2
+    ) {
+      currentSection = section;
+    }
 
-const myObserver = new IntersectionObserver((items) => {
-  items.forEach((item) => {
-    if (item.isIntersecting) {
-      item.target.classList.add("show");
+    if (rect.top < window.innerHeight) {
+      section.classList.add("show");
     } else {
-      item.target.classList.add("hidden");
-      item.target.classList.remove("show");
+      section.classList.remove("show");
     }
   });
-});
 
-elements.forEach((element) => {
-  myObserver.observe(element);
-});
+  links.forEach((link) => {
+    link.classList.remove("activeLink");
+
+    if (
+      currentSection &&
+      link.getAttribute("href") === `#${currentSection.id}`
+    ) {
+      link.classList.add("activeLink");
+    }
+  });
+
+  const footer = document.querySelector("footer");
+  if (footer) {
+    const footerRect = footer.getBoundingClientRect();
+    if (footerRect.top < window.innerHeight) {
+      footer.classList.add("show");
+    } else {
+      footer.classList.remove("show");
+    }
+  }
+};
+
+window.addEventListener("scroll", animarMenu);
+
+animarMenu();
+closeMenuFora();
 
 const nav = document.querySelector(".navigation");
 const section = document.querySelectorAll("section");
