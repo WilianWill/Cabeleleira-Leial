@@ -32,13 +32,9 @@
 .menu ul li a.activeLink {
   color: lightskyblue;
   border-bottom: 1px solid var(--fontColor);
+  text-transform: uppercase;
   transition: color 0.5s ease;
 }
-/* .menu ul li a:hover {
-  color: lightskyblue;
-  border-bottom: 1px solid var(--fontColor);
-  transition: color 0.5s ease;
-} */
 
 .logo-name {
   font-weight: 400;

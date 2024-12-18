@@ -17,8 +17,10 @@
     <link rel="stylesheet" href="./src/styles/hero.css" />
     <!-- about -->
     <link rel="stylesheet" href="./src/styles/about.css" />
-    <!-- prodicts -->
+    <!-- products -->
     <link rel="stylesheet" href="./src/styles/product.css" />
+    <!-- contato -->
+    <link rel="stylesheet" href="./src/styles/contato.css" />
   </head>
 
   <body>
@@ -181,16 +183,26 @@
     <!-- end produtos -->
 
    </main>
-    <footer class="contato hidden" id="contato">
+    <section class="contato hidden" id="contato">
       <h2>Contato</h2>
-      <p>Telefone: (11) 9999-9999</p>
-      <p>Email: 7nN8M@example.com</p>
+      <div class="conatato_info">
+        <p>Telefone: (11) 9999-9999</p>
+        <p>Email: 7nN8M@example.com</p>
+      </div>
+      <div class="contato_form" method="post">
+        <form action="">
+          <input type="text" placeholder="Nome" />
+          <input type="email" placeholder="Email" />
+          <textarea name="" id="text-area" cols="100" rows="10"  placeholder="Mensagem"></textarea>
+          <input type="submit" value="Enviar">
+        </form>
+      </div>
       <div class="redes_sociais">
         <i class="fa-brands fa-instagram"></i>
         <i class="fa-brands fa-facebook"></i>
         <i class="fa-brands fa-twitter"></i>
       </div>
-    </footer>
+    </section >
     <!-- script -->
     <script type="module" src="./src/scripts/index.js"></script>
   </body>
