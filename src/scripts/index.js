@@ -85,7 +85,6 @@ const animarMenu = () => {
   }
 };
 
-animarMenu();
 closeMenuFora();
 
 const nav = document.querySelector(".navigation");

@@ -71,6 +71,7 @@ section {
 }
 
 .activeLink {
-  color: red;
   border-bottom: 1px solid var(--fontColor);
+  transform: translateY(-2px);
+  transition: all 0.5s ease;
 }
