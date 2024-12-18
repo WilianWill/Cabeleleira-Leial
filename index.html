@@ -182,27 +182,45 @@
     </section>
     <!-- end produtos -->
 
-   </main>
-    <section class="contato hidden" id="contato">
-      <h2>Contato</h2>
+     <!-- contato -->
+    
+     <section class="contato hidden" id="contato">
+      <h1>Contato</h1>
       <div class="conatato_info">
+        <p>Endereço: Rua Sem Nome, 0</p>
         <p>Telefone: (11) 9999-9999</p>
         <p>Email: 7nN8M@example.com</p>
       </div>
-      <div class="contato_form" method="post">
-        <form action="">
-          <input type="text" placeholder="Nome" />
-          <input type="email" placeholder="Email" />
-          <textarea name="" id="text-area" cols="100" rows="10"  placeholder="Mensagem"></textarea>
-          <input type="submit" value="Enviar">
+      <div class="contato_form" >
+        <form action="#" method="post">
+          <div class="contato_form-inputs">
+            <label for="name">
+              <h2>Nome</h2>
+            </label>
+            <input type="text" placeholder="Nome" />
+            <label for="email">
+              <h2>Email</h2>
+            </label>
+            <input type="email" placeholder="Email" />
+          </div>
+          <textarea name="textarea" id="text-area" cols="50" rows="10"  placeholder="Mensagem"></textarea>
+          <div class="btn">
+            <input type="submit" value="Enviar" id="submit">
+          </div>
         </form>
+        
       </div>
       <div class="redes_sociais">
+        <h2>Redes Sociais</h2>
+       <div class="icons">
         <i class="fa-brands fa-instagram"></i>
         <i class="fa-brands fa-facebook"></i>
         <i class="fa-brands fa-twitter"></i>
+       </div>
       </div>
     </section >
+ <!-- end contato -->
+   </main>
     <!-- script -->
     <script type="module" src="./src/scripts/index.js"></script>
   </body>

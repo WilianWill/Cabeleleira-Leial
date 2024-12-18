@@ -1,0 +1,124 @@
+.contato {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 0 10px 2px rgba(0, 0, 0, 0.1);
+  border-bottom: 1px solid var(--fontColor);
+  flex-wrap: wrap;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+}
+
+.contato_info p {
+  font-size: 25px;
+}
+
+.contato_info h1 {
+  font-size: 30px;
+}
+
+.contato_form {
+  margin: 0 auto;
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  padding: 2rem;
+  align-items: center;
+  border-bottom: 1px solid var(--fontColor);
+  width: 100%;
+  background-color: rgba(229, 192, 141, 0.404);
+  box-shadow: 0 0 10px 2px rgba(0, 0, 0, 0.1);
+  border-radius: 20px;
+}
+
+.contato_form-inputs {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+  padding: 1rem;
+}
+
+.contato_form-inputs input {
+  border-radius: 10px;
+  border: none;
+  height: 30px;
+  width: 300px;
+  padding: 0.5rem;
+  box-shadow: 0 0 10px 2px rgba(0, 0, 0, 0.1);
+  border-bottom: 1px solid var(--fontColor);
+}
+
+#text-area {
+  border-radius: 10px;
+  border: none;
+  height: 200px;
+  width: 100%;
+  align-items: center;
+  padding: 0.5rem;
+  box-shadow: 0 0 10px 2px rgba(0, 0, 0, 0.1);
+  border-bottom: 1px solid var(--fontColor);
+}
+
+.btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.btn input {
+  cursor: pointer;
+  border-radius: 10px;
+  border: none;
+  height: 30px;
+  width: 300px;
+  padding: 0.5rem;
+  line-height: 2px;
+  box-shadow: 0 0 10px 2px rgba(0, 0, 0, 0.1);
+  border-bottom: 1px solid var(--fontColor);
+  background-color: var(--baseColor);
+  color: var(--fontColor);
+}
+/* media queries */
+
+@media screen and (max-width: 768px) {
+  .contato {
+    flex-direction: column;
+  }
+
+  .contato_info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+
+  .contato_form {
+    width: 100%;
+  }
+
+  .contato_form-inputs input {
+    width: 100%;
+  }
+
+  #text-area {
+    width: 100%;
+  }
+
+  .btn input {
+    width: 100%;
+  }
+
+  .redes_sociais {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .icons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 2rem;
+  }
+}

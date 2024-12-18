@@ -87,13 +87,19 @@ const animarMenu = () => {
 
 closeMenuFora();
 
-const nav = document.querySelector(".navigation");
-const section = document.querySelectorAll("section");
-const navHeight = nav.offsetHeight;
-console.log(navHeight);
+const calcularNav = () => {
+  const nav = document.querySelector(".navigation");
+  const section = document.querySelectorAll("section");
+  const navHeight = nav.offsetHeight;
+  console.log(navHeight);
 
-section.forEach((section) => {
-  section.style.paddingTop = navHeight + "px";
+  section.forEach((section) => {
+    section.style.paddingTop = navHeight + "px";
+  });
+};
+
+calcularNav();
+document.addEventListener("DOMContentLoaded", () => {
+  animarMenu();
+  window.addEventListener("scroll", animarMenu);
 });
-
-window.addEventListener("scroll", animarMenu);
