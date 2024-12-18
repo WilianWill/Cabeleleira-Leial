@@ -72,17 +72,6 @@ const animarMenu = () => {
       link.classList.add("activeLink");
     }
   });
-
-  /* garantir o mesmo comportamento de animação no footer */
-  const footer = document.querySelector("footer");
-  if (footer) {
-    const footerRect = footer.getBoundingClientRect();
-    if (footerRect.top < window.innerHeight) {
-      footer.classList.add("show");
-    } else {
-      footer.classList.remove("show");
-    }
-  }
 };
 
 closeMenuFora();
