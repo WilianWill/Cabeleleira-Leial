@@ -1,85 +1,77 @@
 .faq {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 2rem;
-    margin: 2rem auto;
-    padding: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  margin: 2rem auto;
+  padding: 2rem;
 }
 
 .faq h1 {
-    text-align: center;
-    font-size: 2rem;
-    margin-bottom: 1rem;
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 1rem;
 }
 
 .faq_title {
-    text-align: center;
-    font-size: .7rem;
-    margin-bottom: 1rem;
+  text-align: center;
+  font-size: 0.7rem;
+  margin-bottom: 1rem;
 }
 
 /* ↑ */
 
 dt {
-    display: flex;
-    flex-direction: row;
+  display: flex;
+  flex-direction: row;
 }
 
 dt::after {
-    content: ' ↓';
-    cursor: pointer;
-    margin-left: 0.5rem;
-    font-size: 1rem;
-} 
+  content: " ↓";
+  cursor: pointer;
+  margin-left: 0.5rem;
+  font-size: 1rem;
+}
 
 dt.active::after {
-    content: "↑";
+  content: "↑";
 }
 
 dd {
-    cursor: pointer;
-    height: 0;
-    opacity: 0;
-    overflow: hidden;
-    transition: all ease .5s;
+  cursor: pointer;
+  height: 0;
+  opacity: 0;
+  overflow: hidden;
+  transition: all ease 0.5s;
 
-    animation: fade .5s ease;
+  animation: fade 0.5s ease;
 }
 
 dd.active {
-    height: auto;
-    opacity: 1;
-    
-    
+  height: auto;
+  opacity: 1;
 }
-
 
 @keyframes fade {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
 
-    from {
-        opacity: 0;
-        transform: translateY(-10px);
-
-    }
-
-    to {    
-        opacity: 1;
-        transform: translateY(0px);
-
-    }
-    
+  to {
+    opacity: 1;
+    transform: translateY(0px);
+  }
 }
 
-@media screen and (max-width:768px) {
-    .faq {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-      
-        margin: 2rem auto;
-    }
+@media screen and (max-width: 768px) {
+  .faq {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 
-    
+    margin: 2rem auto;
+  }
 }
