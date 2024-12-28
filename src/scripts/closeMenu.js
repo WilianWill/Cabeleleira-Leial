@@ -1,3 +1,4 @@
+const links = document.querySelectorAll("a");
 function closeMenu() {
   links.forEach((link) => {
     link.addEventListener("click", () => {
