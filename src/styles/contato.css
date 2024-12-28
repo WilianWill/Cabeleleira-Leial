@@ -3,7 +3,7 @@
   justify-content: space-between;
   flex-direction: column;
   align-items: center;
-  box-shadow: 0 0 10px 2px rgba(0, 0, 0, 0.1);
+  /*   box-shadow: 0 0 10px 2px rgba(0, 0, 0, 0.1); */
   border-bottom: 1px solid var(--fontColor);
 
   margin-top: 2rem;
@@ -29,7 +29,6 @@
   align-items: center;
   border-bottom: 1px solid var(--fontColor);
 
-  background-color: rgba(229, 192, 141, 0.404);
   box-shadow: 0 0 10px 2px rgba(0, 0, 0, 0.1);
   border-radius: 20px;
 }
@@ -43,12 +42,28 @@
 
 .contato_form-inputs input {
   border-radius: 10px;
-  border: none;
-  height: 30px;
-  width: 300px;
+  height: 40px;
+  width: 100%;
   padding: 0.5rem;
-  box-shadow: 0 0 10px 2px rgba(0, 0, 0, 0.1);
+  border: none;
+  box-shadow: 0 0 10px 2px rgba(22, 7, 7, 0.1);
   border-bottom: 1px solid var(--fontColor);
+  transition: 0.3s;
+}
+
+.contato_form-inputs input:focus {
+  outline: none;
+  border: 1px solid lightcoral;
+}
+
+.contato_form-inputs input:hover {
+  border: 1px solid lightcoral;
+}
+
+.contato_form-inputs input::placeholder {
+  color: var(--fontColor);
+  font-size: 15px;
+  padding-left: 2px;
 }
 
 #text-area {
@@ -69,16 +84,20 @@
 }
 .btn input {
   cursor: pointer;
-  border-radius: 10px;
   border: none;
+  border-radius: 10px;
   height: 30px;
-  width: 300px;
-  padding: 0.5rem;
-  line-height: 2px;
+  width: 100px;
+  background-color: lightcoral;
+  color: white;
+  font-weight: bold;
   box-shadow: 0 0 10px 2px rgba(0, 0, 0, 0.1);
   border-bottom: 1px solid var(--fontColor);
-  background-color: var(--baseColor);
-  color: var(--fontColor);
+  transition: 0.3s;
+}
+
+.btn input:hover {
+  background-color: red;
 }
 
 footer {
@@ -91,6 +110,7 @@ footer {
 footer a {
   text-decoration: none;
 }
+
 /* media queries */
 
 @media screen and (max-width: 768px) {
@@ -123,7 +143,7 @@ footer a {
     width: 100%;
   }
 
- .contato .redes_sociais {
+  .contato .redes_sociais {
     display: flex;
     flex-direction: column;
   }
