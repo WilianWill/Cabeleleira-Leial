@@ -11,7 +11,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
 changeMenuIcon();
 activeFaq();
-menuAnimation();
 closeMenuOut();
 closeMenu();
 changeMenuIcon();
