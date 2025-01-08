@@ -13,4 +13,3 @@ changeMenuIcon();
 activeFaq();
 closeMenuOut();
 closeMenu();
-changeMenuIcon();
